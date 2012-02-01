@@ -986,8 +986,7 @@ void PlayerClass::AnimatePlayer(void)
 		Armour += 0.2f SYNC;
 
 		// Oder schneller?
-		if (Handlung == STEHEN ||
-			Handlung == SCHIESSEN_O)			
+		if (Handlung == STEHEN || Handlung == SCHIESSEN_O || Handlung == DUCKEN)
 			Armour += 1.0f SYNC;
 
 		if (Armour > MAX_ARMOUR)
