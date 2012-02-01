@@ -25,7 +25,7 @@
 
 #include <windows.h>									// Alle Windows Header includen
 #include <stdio.h>
-#include <Dxerr8.h>
+#include <DxErr.h>
 #include <iostream>
 #include <fstream>
 
@@ -76,10 +76,10 @@ extern DirectGraphicsSprite		*PartikelGrafix[MAX_PARTIKELGFX];	// Grafiken der P
 // --------------------------------------------------------------------------------------
 
 D3DFORMAT				D3DFormat;						// Format der Primary Surface
-D3DCAPS8				d3dcaps;						// Möglichkeiten der Hardware
-LPDIRECT3D8				lpD3D			= NULL;			// Direct3D Hauptobjekt
-LPDIRECT3DDEVICE8		lpD3DDevice		= NULL;			// Direct3D Device-Objekt
-LPDIRECT3DSURFACE8		lpBackbuffer	= NULL;			// Der Backbuffer
+D3DCAPS9				d3dcaps;						// Möglichkeiten der Hardware
+LPDIRECT3D9				lpD3D			= NULL;			// Direct3D Hauptobjekt
+LPDIRECT3DDEVICE9		lpD3DDevice		= NULL;			// Direct3D Device-Objekt
+LPDIRECT3DSURFACE9		lpBackbuffer	= NULL;			// Der Backbuffer
 HWND					DesktopHWND		= NULL;			// Handle des Desktops
 HWND					g_hwnd			= NULL;			// Handle des Hauptfensters
 HINSTANCE				g_hinst;						// hinstance des Hauptfensters

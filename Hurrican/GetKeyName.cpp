@@ -15,6 +15,9 @@
 // Include-Dateien
 //---------------------------------------------------------------------------------------
 
+#ifndef DIRECTINPUT_VERSION
+#define DIRECTINPUT_VERSION 0x0800
+#endif
 #include <dinput.h>								// Wegen der Key-Code Defines
 #include "DX8Input.h"
 #include "GetKeyName.h"							// Unser Header =)

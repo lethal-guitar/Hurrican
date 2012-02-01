@@ -17,7 +17,7 @@
 
 #include "Trigger_TutorialText.h"			// muss oben sein, weil es <string> includiert
 
-#include <d3dx8.h>
+#include <d3dx9.h>
 #include "DX8Sprite.h"
 
 #include "Gegner_Auge.h"

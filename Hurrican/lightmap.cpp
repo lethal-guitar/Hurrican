@@ -55,7 +55,7 @@ void CLightMap::Load(const char *filename)
     HBITMAP             hbm = NULL;
     BITMAP              bm;
     HDC                 hdcImage;   
-	LPDIRECT3DTEXTURE8	tempText = NULL;
+	LPDIRECT3DTEXTURE9	tempText = NULL;
 	char				Name[100];
 	char				*pData; 
 	unsigned long		Size; 

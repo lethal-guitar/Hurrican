@@ -15,8 +15,8 @@
 
 #include <stdio.h>
 #include "DX8Sprite.h"
-#include <d3dx8.h>										// Für die Texturen
-#include <d3dx8math.h>									// Für D3DXVECTOR2
+#include <d3dx9.h>										// Für die Texturen
+//#include <d3dx8math.h>									// Für D3DXVECTOR2
 #include "DX8Graphics.h"
 #include "Gameplay.h"
 #include "Globals.h"
@@ -99,8 +99,8 @@ bool DirectGraphicsSurface::LoadImage(const char *Filename, int xSize, int ySize
 	char	Temp[140];
 
 	// Surface erstellen
-	hresult = lpD3DDevice->CreateImageSurface(xSize, ySize, D3DFormat, &itsSurface);
-
+	hresult = lpD3DDevice->CreateOffscreenPlainSurface(xSize, ySize, D3DFormat, D3DPOOL_DEFAULT, &itsSurface, NULL);
+	
 	// Fehler beim Surface erstellen ?
 	if(hresult != D3D_OK)
 	{
@@ -165,11 +165,23 @@ RECT DirectGraphicsSurface::GetRect(void)
 // --------------------------------------------------------------------------------------
 // Bild auf Surface anzeigen
 // --------------------------------------------------------------------------------------
+/*HRESULT StretchRect(
+  [in]  IDirect3DSurface9 *pSourceSurface,
+  [in]  const RECT *pSourceRect,
+  [in]  IDirect3DSurface9 *pDestSurface,
+  [in]  const RECT *pDestRect,
+  [in]  D3DTEXTUREFILTERTYPE Filter
+);*/
 
-bool DirectGraphicsSurface::DrawSurface(LPDIRECT3DSURFACE8 &Temp, int xPos, int yPos)
+bool DirectGraphicsSurface::DrawSurface(LPDIRECT3DSURFACE9 &Temp, int xPos, int yPos)
 {
 	POINT Dest = {(int)(xPos), (int)(yPos)};						// Zielkoordinaten
-	lpD3DDevice->CopyRects(itsSurface, &itsRect, 1, Temp, &Dest);	// anzeigen
+	RECT destRect;
+	destRect.left = Dest.x;
+	destRect.top = Dest.y;
+	destRect.right = Dest.x + itsRect.right - itsRect.left;
+	destRect.bottom = Dest.y + itsRect.bottom - itsRect.top;
+	lpD3DDevice->StretchRect(itsSurface, &itsRect, Temp, &destRect, D3DTEXF_NONE); //anzeigen
 	return true;
 }
 

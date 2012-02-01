@@ -1815,7 +1815,7 @@ void ProjectileClass::CheckCollision(void)
 					pEnemy->Energy -= BossZiehtWenigerAb * Damage SYNC;	// Dann fliegt er
 
 					// Hit-Sound
-					if (true ?? pSoundManager->InitSuccessfull &&
+					if (pSoundManager->InitSuccessfull &&
 						!(pSoundManager->its_Sounds[SOUND_HIT + pEnemy->HitSound]->isPlaying))
 						  pSoundManager->PlayWave(50, 128, 21000, SOUND_HIT + pEnemy->HitSound);
 				}											// nach dem Energy abziehen weiter

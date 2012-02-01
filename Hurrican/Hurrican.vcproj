@@ -49,6 +49,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="inc"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;DETECT_LEAKS"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
@@ -75,10 +76,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Dxerr8.lib dxguid.lib d3d8.lib d3dx8.lib dsound.lib dinput8.lib winmm.lib fmodvc.lib odbc32.lib"
+				AdditionalDependencies="Dxerr.lib dxguid.lib d3d9.lib d3dx9.lib dsound.lib dinput8.lib winmm.lib fmodvc.lib odbc32.lib"
 				OutputFile="Hurrican.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="lib"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=".\Debug/Hurrican.pdb"
 				SubSystem="2"
@@ -143,7 +145,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="d:/APIS/MemLeaks/"
+				AdditionalIncludeDirectories="inc"
 				PreprocessorDefinitions="NDEBUG;WIN32;_WINDOWS"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -171,10 +173,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="dxguid.lib d3d8.lib d3dx8.lib dsound.lib dinput8.lib winmm.lib fmodvc.lib odbc32.lib"
+				AdditionalDependencies="dxguid.lib d3d9.lib d3dx9.lib dsound.lib dinput8.lib winmm.lib fmodvc.lib odbc32.lib"
 				OutputFile="Hurrican.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="lib"
 				ProgramDatabaseFile=".\Release/Hurrican.pdb"
 				SubSystem="2"
 				RandomizedBaseAddress="1"
@@ -3509,31 +3512,8 @@
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\..\APIs\unrar lib 0.4.0\unrarlib\unrarlib.c"
+					RelativePath=".\lib\unrarlib.c"
 					>
-					<FileConfiguration
-						Name="Debug|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							Optimization="0"
-							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-							BrowseInformation="1"
-							WarningLevel="0"
-						/>
-					</FileConfiguration>
-					<FileConfiguration
-						Name="Release|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							Optimization="2"
-							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-							BrowseInformation="1"
-						/>
-					</FileConfiguration>
 				</File>
 			</Filter>
 			<Filter

@@ -37,7 +37,7 @@ extern TileEngineClass		*pTileEngine;
 extern ProjectileListClass	*pProjectiles;
 extern CSoundManager		*pSoundManager;
 extern ConsoleClass			*pConsole;
-extern LPDIRECT3DDEVICE8	lpD3DDevice;				// Direct3D Device-Objekt
+extern LPDIRECT3DDEVICE9	lpD3DDevice;				// Direct3D Device-Objekt
 extern VERTEX2D				v1, v2, v3, v4;						// Vertices zum Partikel rendern
 extern VERTEX2D				TriangleStrip[4];					// Strip für einen Partikel
 

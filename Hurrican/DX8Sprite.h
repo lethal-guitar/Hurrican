@@ -48,7 +48,7 @@ RECT GetClippingArea(void);										// Aktuelle Clipping Area abfragen
 class DirectGraphicsSurface
 {
 	private:
-		LPDIRECT3DSURFACE8	itsSurface;							// Surface mit Grafikdaten
+		LPDIRECT3DSURFACE9	itsSurface;							// Surface mit Grafikdaten
 		RECT				itsRect;							// zu zeigender Ausschnitt
 
 	public:
@@ -59,7 +59,7 @@ class DirectGraphicsSurface
 		bool  SetRect	  (int left,  int top, 
 						   int right, int bottom);				// Neuen Ausschnitt setzen
 		RECT  GetRect	  (void);								// Ausschnitt holen
-		bool  DrawSurface (LPDIRECT3DSURFACE8 &Temp,			// Bild auf Surface Temp anzeigen
+		bool  DrawSurface (LPDIRECT3DSURFACE9 &Temp,			// Bild auf Surface Temp anzeigen
 						   int xPos, int yPos);					// an Position xPos/yPos
 };
 
@@ -84,7 +84,7 @@ class DirectGraphicsSprite
 
 
 		RECT				itsPreCalcedRects[256];				// vorberechnete Ausschnitte für die Frames
-		LPDIRECT3DTEXTURE8	itsTexture;							// Textur mit Grafikdaten
+		LPDIRECT3DTEXTURE9	itsTexture;							// Textur mit Grafikdaten
 			  DirectGraphicsSprite(void);						// Konstruktor (leer)
 			 ~DirectGraphicsSprite(void);						// Textur freigeben
 

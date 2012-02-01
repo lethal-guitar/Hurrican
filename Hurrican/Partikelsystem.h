@@ -16,7 +16,7 @@
 // Include Dateien
 // --------------------------------------------------------------------------------------
 
-#include <d3dx8.h>
+#include <d3dx9.h>
 #include "DX8Sprite.h"
 #include "Player.h"
 

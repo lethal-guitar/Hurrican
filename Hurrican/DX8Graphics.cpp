@@ -82,7 +82,7 @@ bool DirectGraphicsClass::Init(HWND hwnd, DWORD dwBreite, DWORD dwHoehe,
 
 	ZeroMemory(&d3dpp,sizeof(d3dpp));
 
-	lpD3D = Direct3DCreate8(D3D_SDK_VERSION);	
+	lpD3D = Direct3DCreate9(D3D_SDK_VERSION);	
 
 	//Res = lpD3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &DisplayMode);
 
@@ -95,7 +95,7 @@ bool DirectGraphicsClass::Init(HWND hwnd, DWORD dwBreite, DWORD dwHoehe,
 	d3dpp.BackBufferHeight					= SCREENHEIGHT;					// Screenhöhe
 	d3dpp.BackBufferFormat					= D3DFMT_X8R8G8B8;				
 
-	d3dpp.SwapEffect	= D3DSWAPEFFECT_COPY_VSYNC;		// VSync an	
+	//d3dpp.SwapEffect	= D3DSWAPEFFECT_COPY_VSYNC;		// VSync an	
 	//if(VSync == true)	d3dpp.SwapEffect	= D3DSWAPEFFECT_COPY_VSYNC;		// VSync an	
 //				else	
 					d3dpp.SwapEffect	= D3DSWAPEFFECT_DISCARD;		// VSync aus
@@ -104,9 +104,9 @@ bool DirectGraphicsClass::Init(HWND hwnd, DWORD dwBreite, DWORD dwHoehe,
 	{
 		d3dpp.FullScreen_RefreshRateInHz		= D3DPRESENT_RATE_DEFAULT;		// Refresh Rate
 		if(VSync == true)														// VSYNC anlassen
-			d3dpp.FullScreen_PresentationInterval	= D3DPRESENT_INTERVAL_ONE;		
+			d3dpp.PresentationInterval	= D3DPRESENT_INTERVAL_ONE;		
 		else																	// VSYNC auslassen
-			d3dpp.FullScreen_PresentationInterval	= D3DPRESENT_INTERVAL_IMMEDIATE;		
+			d3dpp.PresentationInterval	= D3DPRESENT_INTERVAL_IMMEDIATE;		
 	}
 
 	d3dpp.Flags								= D3DPRESENTFLAG_LOCKABLE_BACKBUFFER;	// Backbuffer 
@@ -176,7 +176,7 @@ _ModeFound:
 
 	// Rausfinden, wie ich die Texturen laden muss (nur rechteckig, 2er Potenz)
 	// Device kann nur quadratische Texturen
-	D3DCAPS8 d3dCaps;
+	D3DCAPS9 d3dCaps;
 
 	lpD3DDevice->GetDeviceCaps(&d3dCaps);
 	
@@ -240,7 +240,7 @@ bool DirectGraphicsClass::SetDeviceInfo(void)
 	HRESULT hr;
 
 	// Globale Variable mit dem tatsächlichen BackBuffer füllen	
-	lpD3DDevice->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &lpBackbuffer);
+	//lpD3DDevice->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &lpBackbuffer);
 
    // Licht, Cullmodus und Z-Buffer aktivieren
    lpD3DDevice->SetRenderState(D3DRS_AMBIENT,D3DCOLOR_XRGB(255,255,255));
@@ -261,10 +261,10 @@ bool DirectGraphicsClass::SetDeviceInfo(void)
 	}
 
 	// Flexible Vertex Format setzen
-	hr = lpD3DDevice->SetVertexShader (D3DFVF_TLVERTEX);		
+	hr = lpD3DDevice->SetFVF(D3DFVF_TLVERTEX);
 	if(hr != D3D_OK)
 	{
-		Protokoll.WriteText("\n-> SetVertexShader error!\n", true);
+		Protokoll.WriteText("\n-> SetFVF error!\n", true);
 		return false;
 	}
 
@@ -282,9 +282,10 @@ bool DirectGraphicsClass::SetDeviceInfo(void)
 
 bool DirectGraphicsClass::TakeScreenshot(char Filename[100], int screenx, int screeny)
 {	
+	/*
 	FILE*				f = NULL;					// Datei
 	HRESULT				hr;							// Für Fehler-Prüfung
-	IDirect3DSurface8*	FrontBuffer;				// Zeiger auf Frontbuffer
+	IDirect3DSurface9*	FrontBuffer;				// Zeiger auf Frontbuffer
 
 	// Surface erzeugen, in die das Bild kopiert wird
 	lpD3DDevice->CreateImageSurface(screenx, screeny, D3DFMT_A8R8G8B8, &FrontBuffer);
@@ -342,7 +343,7 @@ bool DirectGraphicsClass::TakeScreenshot(char Filename[100], int screenx, int sc
 
 	// Surface wieder freigeben
 	FrontBuffer->Release();
-
+	*/
 	return true;
 }
 
@@ -407,16 +408,16 @@ void DirectGraphicsClass::SetFilterMode (bool filteron)
 	//
 	if (filteron == true)
 	{		
-		lpD3DDevice->SetTextureStageState(0, D3DTSS_MINFILTER, D3DTEXF_LINEAR);
-		lpD3DDevice->SetTextureStageState(0, D3DTSS_MAGFILTER, D3DTEXF_LINEAR);
+		lpD3DDevice->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_LINEAR);
+		lpD3DDevice->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_LINEAR);
 	}
 
 	// andernfalls Filter ausschalten
 	//
 	else
 	{
-		lpD3DDevice->SetTextureStageState(0, D3DTSS_MINFILTER, D3DTEXF_POINT);
-		lpD3DDevice->SetTextureStageState(0, D3DTSS_MAGFILTER, D3DTEXF_POINT);
+		lpD3DDevice->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_POINT);
+		lpD3DDevice->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
 	}
 		
 	FilterMode = filteron;

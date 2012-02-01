@@ -17,10 +17,10 @@
 // Include Dateien
 // --------------------------------------------------------------------------------------
 
-#include <d3d8.h>
-#include <d3dx8.h>
-#include <d3dx8tex.h>
-#include <D3dx8math.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+//#include <d3dx8tex.h>
+//#include <D3dx8math.h>
 
 // --------------------------------------------------------------------------------------
 // Defines
@@ -98,13 +98,13 @@ class DirectGraphicsClass
 // Externals
 // --------------------------------------------------------------------------------------
 
-extern LPDIRECT3D8				lpD3D;							// Direct3D Hauptobjekt
-extern LPDIRECT3DDEVICE8		lpD3DDevice;					// Direct3D Device-Objekt
+extern LPDIRECT3D9				lpD3D;							// Direct3D Hauptobjekt
+extern LPDIRECT3DDEVICE9		lpD3DDevice;					// Direct3D Device-Objekt
 extern DirectGraphicsClass		DirectGraphics;					// DirectGraphics Klasse
-extern LPDIRECT3DSURFACE8		lpBackbuffer;					// Der Backbuffer
+//extern LPDIRECT3DSURFACE9		lpBackbuffer;					// Der Backbuffer
 extern D3DFORMAT				D3DFormat;						// Format der Primary Surface
-extern D3DCAPS8					d3dcaps;						// Möglichkeiten der Hardware
-extern LPDIRECT3DVERTEXBUFFER8	lpVBSprite;						// VertexBuffer für die Sprites
+extern D3DCAPS9					d3dcaps;						// Möglichkeiten der Hardware
+extern LPDIRECT3DVERTEXBUFFER9	lpVBSprite;						// VertexBuffer für die Sprites
 extern D3DXMATRIX				matProj;						// Projektionsmatrix
 extern D3DXMATRIX				matWorld;						// Weltmatrix
 extern float					DegreetoRad[360];				// Tabelle mit Rotationswerten
