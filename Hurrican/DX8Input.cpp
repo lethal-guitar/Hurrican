@@ -208,18 +208,18 @@ bool DirectInputClass::Init(HWND hwnd, HINSTANCE hinst)
 		if(Joysticks[i].Init(hwnd, lpDI) == false)
 		
 		{
-			strcpy_s(Buf, strlen("Error initialising Joystick ") + 1, "Error initialising Joystick ");
-			strcat_s(Buf, strlen(Joysticks[i].JoystickName) + 1, Joysticks[i].JoystickName);
-			strcat_s(Buf, 5, " !\n");
+			strcpy_s(Buf, 255, "Error initialising Joystick ");
+			strcat_s(Buf, 255, Joysticks[i].JoystickName);
+			strcat_s(Buf, 255, " !\n");
 			Protokoll.WriteText(Buf, false);
 		}
 		else
 		{
 			JoystickFound = true;
 
-			strcpy_s(Buf, strlen("Joystick found : ") + 1, "Joystick found : ");
-			strcat_s(Buf, strlen(Joysticks[i].JoystickName) + 1, Joysticks[i].JoystickName);
-			strcat_s(Buf, 3, "\n");
+			strcpy_s(Buf, 255, "Joystick found : ");
+			strcat_s(Buf, 255, Joysticks[i].JoystickName);
+			strcat_s(Buf, 255, "\n");
 			Protokoll.WriteText (Buf, false);
 
 			if (Joysticks[i].CanForceFeedback)

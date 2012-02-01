@@ -1,0 +1,1147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quellcodedateien">
+      <UniqueIdentifier>{dab5b0d1-cb0d-4fe0-b315-a344fe2004d4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Quellcodedateien\Gegner">
+      <UniqueIdentifier>{0ec7e42b-79c2-4f9f-a75f-e9dd45128c09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quellcodedateien\DirectX">
+      <UniqueIdentifier>{88a4b3bb-f93a-459c-9204-0026f60c4bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quellcodedateien\Engine">
+      <UniqueIdentifier>{5e16de4d-65c2-4fc7-9e75-173dd6e3acaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quellcodedateien\Boss">
+      <UniqueIdentifier>{e128a205-3abf-42fc-b571-aed280f5dc34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quellcodedateien\Trigger">
+      <UniqueIdentifier>{66dfc797-808c-47b0-99c7-c3cb0999e4c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header-Dateien">
+      <UniqueIdentifier>{dd8c306a-1e6b-44aa-8f0d-54140709ed34}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header-Dateien\Gegner.h">
+      <UniqueIdentifier>{6f575604-9df2-4d2a-941b-62b821e78c0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header-Dateien\DirectX.h">
+      <UniqueIdentifier>{35915c85-745d-471d-8ce4-e832afb4f53d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header-Dateien\Engine.h">
+      <UniqueIdentifier>{12399a53-d495-4fba-bd75-e0bec49b7778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header-Dateien\Boss.h">
+      <UniqueIdentifier>{96cb45aa-3df4-43a1-8365-091e92c8f7b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header-Dateien\Trigger.h">
+      <UniqueIdentifier>{badea694-47c4-4f10-a8d8-e6f707c45b3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{a75d7c90-9671-49cc-9d5e-45ccd4f7640d}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Quellcodedateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CDragonHack.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Auge.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_BallerDrone.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_BigRocket.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_BlueBoulder.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_BrockelRock.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Climber.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_DeckenKrabbe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Deckenturm.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Diamant.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Drone.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_EierMann.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_EisStachel.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Eiszapfen.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Extras.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FallBombe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FallingRock.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FetteRakete.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FetteSpinne.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FieseDrone.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FieserFireWalker.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FieserWalker.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FireSpider.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Fledermaus.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_FlugKanone.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Flugsack.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Geschuetz.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_GunTower.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Jaeger.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Kettenglied.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KrabblerLinks.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KrabblerOben.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KrabblerRechts.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KugelGross.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KugelKlein.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KugelMedium.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_KugelRiesig.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_LaFass.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_LavaBall.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_LavaBallSpawner.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_LavaKrabbe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Lavamann.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Made.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Minidragon.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_MiniRocket.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_MittelSpinne.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Mutant.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Nest.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_NeuFisch.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_OneUp.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_PFlanze.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Piranha.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_PokeNuke.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_PowerBlock.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Punisher.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Qualle.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Raketenwerfer.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_ReitFlugsack.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_RoboMan1.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_RoboRaupe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Rotzpott.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Schabe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SchienenViech.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SchleimAlien.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SchleimBoller.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SchleimMaul.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Schneekoppe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Schwabbel.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SideRocket.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SkiWalker.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SmallWespe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SnowBomb.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SpiderBomb.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Spitter.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Spitterbombe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Stachelbeere.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Stahlmuecke.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Stalagtit.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_StarBig.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_StarSmall.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_StelzSack.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_SwimWalker.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Walker.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_WandKannone.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_WandKrabbe.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_WasserMine.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Zitrone.cpp">
+      <Filter>Quellcodedateien\Gegner</Filter>
+    </ClCompile>
+    <ClCompile Include="DX8Font.cpp">
+      <Filter>Quellcodedateien\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DX8Graphics.cpp">
+      <Filter>Quellcodedateien\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DX8Input.cpp">
+      <Filter>Quellcodedateien\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DX8Joystick.cpp">
+      <Filter>Quellcodedateien\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DX8Sound.cpp">
+      <Filter>Quellcodedateien\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DX8Sprite.cpp">
+      <Filter>Quellcodedateien\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="CCracktro.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="CCutScene.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Gegner_Helper.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GegnerClass.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GetKeyName.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISystem.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.CPP">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Intro.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="lightmap.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Logdatei.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Outtro.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Partikelsystem.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectiles.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Texts.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Tileengine.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\unrarlib.c">
+      <Filter>Quellcodedateien\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_BigFish.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Bratklops.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Drache.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_EisFaust.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_EvilHurri.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_FahrstuhlBoss.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_FlugBoss.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Golem.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_MetalHead.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_PharaoKopf.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_RiesenPiranha.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_RiesenQualle.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_RiesenRaupe.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_RiesenSpinne.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_RiesenWespe.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Rollmops.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_SchmidtOrgie.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Schneekoenig.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Skeletor.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Skull.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Spinnenmaschine.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Stahlfaust.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_TheWall.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_Ufo.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss_WuxeSpinnen.cpp">
+      <Filter>Quellcodedateien\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Bruecke.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Column.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Column2.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_EndLevel.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_FadeMusic.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_FahrStuhl.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Fass.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Feuerspucker.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Floating.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Floating2.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Floating3.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Glubschi.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Glubschi2.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_LaFassSpawner.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Lift.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_LightFlare.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_LuefterGross.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_LuefterKlein.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_LuefterKlein2.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Mushroom.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_PartikelSpawner.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Plattform.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Presse.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Presswurst.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_SchleuseH.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_SchleuseV.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Secret.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_ShootButton.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_ShootPlattform.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Shrine.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_SoundTrigger.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Spikelift.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Stampfstein.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_SurfBrett.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Switch.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Tube.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_TutorialText.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger_Warning.cpp">
+      <Filter>Quellcodedateien\Trigger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc">
+      <Filter>Quellcodedateien</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Globals.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header-Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CDragonHack.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Auge.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_BallerDrone.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_BigRocket.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_BlueBoulder.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_BrockelRock.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Climber.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_DeckenKrabbe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Deckenturm.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Diamant.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Drone.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_EierMann.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_EisStachel.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Eiszapfen.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Extras.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FallBombe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FallingRock.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FetteRakete.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FetteSpinne.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FieseDrone.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FieserFireWalker.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FieserWalker.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FireSpider.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Fledermaus.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_FlugKanone.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Flugsack.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Geschuetz.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_GunTower.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Jaeger.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Kettenglied.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KrabblerLinks.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KrabblerOben.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KrabblerRechts.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KugelGross.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KugelKlein.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KugelMedium.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_KugelRiesig.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_LaFass.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_LavaBall.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_LavaBallSpawner.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_LavaKrabbe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Lavamann.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Made.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Minidragon.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_MiniRocket.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_MittelSpinne.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Mutant.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Nest.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_NeuFisch.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_OneUp.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Pflanze.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Piranha.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_PokeNuke.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_PowerBlock.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Punisher.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Qualle.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Raketenwerfer.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_ReitFlugsack.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_RoboMan1.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_RoboRaupe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Rotzpott.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Schabe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SchienenViech.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SchleimAlien.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SchleimBoller.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SchleimMaul.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Schneekoppe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Schwabbel.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SideRocket.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SkiWalker.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SmallWespe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SnowBomb.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SpiderBomb.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Spitter.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Spitterbombe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Stachelbeere.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Stahlmuecke.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Stalagtit.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_StarBig.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_StarSmall.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_StelzSack.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_SwimWalker.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Walker.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_WandKannone.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_WandKrabbe.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_WasserMine.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Zitrone.h">
+      <Filter>Header-Dateien\Gegner.h</Filter>
+    </ClInclude>
+    <ClInclude Include="DX8Font.h">
+      <Filter>Header-Dateien\DirectX.h</Filter>
+    </ClInclude>
+    <ClInclude Include="DX8Graphics.h">
+      <Filter>Header-Dateien\DirectX.h</Filter>
+    </ClInclude>
+    <ClInclude Include="DX8Input.h">
+      <Filter>Header-Dateien\DirectX.h</Filter>
+    </ClInclude>
+    <ClInclude Include="DX8Joystick.h">
+      <Filter>Header-Dateien\DirectX.h</Filter>
+    </ClInclude>
+    <ClInclude Include="DX8Sound.h">
+      <Filter>Header-Dateien\DirectX.h</Filter>
+    </ClInclude>
+    <ClInclude Include="DX8Sprite.h">
+      <Filter>Header-Dateien\DirectX.h</Filter>
+    </ClInclude>
+    <ClInclude Include="CCracktro.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="CCutScene.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Helper.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Gegner_Stuff.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GegnerClass.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GetKeyName.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GUISystem.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.H">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Intro.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="lightmap.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Logdatei.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="mymath.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Outtro.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Partikelsystem.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectiles.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Texts.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Tileengine.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\APIs\unrar lib 0.4.0\unrarlib\unrarlib.h">
+      <Filter>Header-Dateien\Engine.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_BigFish.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Bratklops.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Drache.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_EisFaust.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_EvilHurri.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_FahrstuhlBoss.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_FlugBoss.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Golem.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_MetalHead.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_PharaoKopf.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_RiesenPiranha.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_RiesenQualle.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_RiesenRaupe.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_RiesenSpinne.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_RiesenWespe.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Rollmops.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_SchmidtOrgie.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Schneekoenig.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Skeletor.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Skull.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Spinnenmaschine.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Stahlfaust.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_TheWall.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_Ufo.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss_WuxeSpinnen.h">
+      <Filter>Header-Dateien\Boss.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Bruecke.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Column.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Column2.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_EndLevel.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_FadeMusic.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Fahrstuhl.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Fass.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Feuerspucker.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Floating.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Floating2.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Floating3.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Glubschi.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Glubschi2.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_LaFassSpawner.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Lift.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_LightFlare.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_LuefterGross.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_LuefterKlein.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_LuefterKlein2.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Mushroom.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_PartikelSpawner.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Plattform.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Presse.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Presswurst.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_SchleuseH.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_SchleuseV.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Secret.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_ShootButton.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_ShootPlattform.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Shrine.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_SoundTrigger.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Spikelift.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Stampfstein.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_SurfBrett.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Switch.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Tube.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_TutorialText.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger_Warning.h">
+      <Filter>Header-Dateien\Trigger.h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hurrican.ico">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="splashscreen.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+  </ItemGroup>
+</Project>
