@@ -13,8 +13,8 @@
 // Includes
 // --------------------------------------------------------------------------------------
 
-#include <d3dx8.h>										// Für die Texturen
-#include <d3dx8math.h>									// Für D3DXVECTOR2
+#include <d3dx9.h>										// Für die Texturen
+//#include <d3dx8math.h>									// Für D3DXVECTOR2
 #include "Globals.h"
 #include "Logdatei.h"
 #include "DX8Graphics.h"
@@ -34,11 +34,11 @@ unsigned int			LoadedTextures = 0;					// Wieviele Texturen geladen ?
 // --------------------------------------------------------------------------------------
 
 extern Logdatei					Protokoll;					// Protokoll Datei
-extern LPDIRECT3DDEVICE8		lpD3DDevice;				// Direct3D Device-Objekt
+extern LPDIRECT3DDEVICE9		lpD3DDevice;				// Direct3D Device-Objekt
 extern D3DFORMAT				D3DFormat;					// Format der Primary Surface
-extern LPDIRECT3DSURFACE8		lpBackbuffer;				// Der Backbuffer
-extern D3DCAPS8					d3dcaps;					// Möglichkeiten der Hardware
-extern LPDIRECT3DVERTEXBUFFER8	lpVBSprite;					// VertexBuffer für die Sprites
+//extern LPDIRECT3DSURFACE9		lpBackbuffer;				// Der Backbuffer
+extern D3DCAPS9					d3dcaps;					// Möglichkeiten der Hardware
+extern LPDIRECT3DVERTEXBUFFER9	lpVBSprite;					// VertexBuffer für die Sprites
 extern DirectGraphicsClass		DirectGraphics;				// DirectGraphics Klasse
 extern D3DXMATRIX				matProj;					// Projektionsmatrix
 extern D3DXMATRIX				matWorld;					// Weltmatrix
@@ -107,7 +107,7 @@ bool DirectGraphicsSurface::LoadImage(char Filename[100], int xSize, int ySize)
 	char	Temp[140];
 
 	// Surface erstellen
-	hresult = lpD3DDevice->CreateImageSurface(xSize, ySize, D3DFormat, &itsSurface);
+	hresult = lpD3DDevice->CreateOffscreenPlainSurface(xSize, ySize, D3DFormat, D3DPOOL_DEFAULT, &itsSurface, NULL);
 
 	// Fehler beim Surface erstellen ?
 	if(hresult != D3D_OK)
@@ -173,10 +173,15 @@ RECT DirectGraphicsSurface::GetRect(void)
 // Bild auf Surface anzeigen
 // --------------------------------------------------------------------------------------
 
-bool DirectGraphicsSurface::DrawSurface(LPDIRECT3DSURFACE8 &Temp, int xPos, int yPos)
+bool DirectGraphicsSurface::DrawSurface(LPDIRECT3DSURFACE9 &Temp, int xPos, int yPos)
 {
 	POINT Dest = {(int)(xPos), (int)(yPos)};						// Zielkoordinaten
-	lpD3DDevice->CopyRects(itsSurface, &itsRect, 1, Temp, &Dest);	// anzeigen
+	RECT destRect;
+	destRect.left = Dest.x;
+	destRect.top = Dest.y;
+	destRect.right = Dest.x + itsRect.right - itsRect.left;
+	destRect.bottom = Dest.y + itsRect.bottom - itsRect.top;
+	lpD3DDevice->StretchRect(itsSurface, &itsRect, Temp, &destRect, D3DTEXF_NONE); //anzeigen
 	return true;
 }
 
@@ -537,15 +542,15 @@ bool DirectGraphicsSprite::RenderSpriteRotated(float x, float y, int Winkel, D3D
 	lpD3DDevice->SetTransform(D3DTS_WORLD, &matWorld);
 
 	// Filter einstellen
-	lpD3DDevice->SetTextureStageState(0, D3DTSS_MINFILTER, D3DTEXF_LINEAR);
-	lpD3DDevice->SetTextureStageState(0, D3DTSS_MAGFILTER, D3DTEXF_LINEAR);
+	lpD3DDevice->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_LINEAR);
+	lpD3DDevice->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_LINEAR);
 
     // Sprite zeichnen
     lpD3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP,2,&TriangleStrip[0],sizeof(VERTEX2D));
 
 	// und Filter wieder ausschalten
-	lpD3DDevice->SetTextureStageState(0, D3DTSS_MINFILTER, D3DTEXF_POINT);
-	lpD3DDevice->SetTextureStageState(0, D3DTSS_MAGFILTER, D3DTEXF_POINT);
+	lpD3DDevice->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_POINT);
+	lpD3DDevice->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
 
 	// Normale Projektions-Matrix wieder herstellen
 	D3DXMatrixRotationZ (&matWorld, 0.0f);

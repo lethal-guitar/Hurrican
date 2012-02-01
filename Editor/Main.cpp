@@ -363,9 +363,9 @@ HPEN					Pens[10];						// Pens für Linien
 														// der Block-Arten
 
 D3DFORMAT				D3DFormat;						// Format der Primary Surface
-LPDIRECT3DDEVICE8		lpD3DDevice	 = NULL;			// Direct3D Device-Objekt
-LPDIRECT3DSURFACE8		lpBackbuffer = NULL;			// Der Backbuffer
-D3DCAPS8				d3dcaps;						// Möglichkeiten der Hardware
+LPDIRECT3DDEVICE9		lpD3DDevice	 = NULL;			// Direct3D Device-Objekt
+//LPDIRECT3DSURFACE9		lpBackbuffer = NULL;			// Der Backbuffer
+D3DCAPS9				d3dcaps;						// Möglichkeiten der Hardware
 
 bool					EditorPaused	= false;		// Editor eingefroren (wenn man zb das Fenster verlässt)
 
@@ -2386,7 +2386,7 @@ bool Heartbeat(void)
 
 	// Levelbeschreibung aus Textfeld auslesen
 	int ilen = 0;
-	char buf[8];
+	char buf[16];
 
 	SendMessage(BeschreibungsFeld, WM_GETTEXT, ilen+1, (long)Beschreibung);
 
@@ -4262,7 +4262,7 @@ bool SaveLevel(bool SaveAs)
 	strcpy(DateiHeader.ParallaxBFile,  BackgroundNames.ParallaxBFile);
 	strcpy(DateiHeader.CloudFile,	   BackgroundNames.CloudFile);
 
-	for(i=0; i<NumUsedSets; i++)
+	for(int i=0; i<NumUsedSets; i++)
 	{
 		SendMessage(ComboBoxSelectTileset, CB_GETLBTEXT, TilesetNummer[i], (LPARAM) StringBuffer);
 		strcpy(DateiHeader.SetNames[i], StringBuffer);
@@ -4272,7 +4272,7 @@ bool SaveLevel(bool SaveAs)
 	fwrite(&DateiHeader, sizeof(DateiHeader), 1, Datei);
 
 	// LevelDaten sichern		 
-	 for(i=0; i<LevelSizeX; i++)
+	 for(int i=0; i<LevelSizeX; i++)
 	  for(int j=0; j<LevelSizeY; j++)
 		 fwrite(&pTileEngine->Tiles[i][j], sizeof(pTileEngine->Tiles[i][j]), 1, Datei);
 
@@ -4433,7 +4433,7 @@ bool LoadLevel(void)
 	_itoa(LevelSizeY, Buffer, 10);	SendMessage(EditSizeY, WM_SETTEXT, 0, (long)Buffer);
 
 	// Tilesets richtig im Editor anordnen wie im Level
-	for(i=0; i< NumUsedSets; i++)
+	for(int i=0; i< NumUsedSets; i++)
 	{
 		char StringBuffer[16];
 
@@ -4452,7 +4452,7 @@ bool LoadLevel(void)
 	// LevelDaten laden
 	pTileEngine->InitNewLevel(LevelSizeX, LevelSizeY);
 
-	for(i=0; i<LevelSizeX; i++)
+	for(int i=0; i<LevelSizeX; i++)
 	 for(int j=0; j<LevelSizeY; j++) 
 	 {
 		 fread(&pTileEngine->Tiles[i][j], sizeof(pTileEngine->Tiles[i][j]), 1, Datei);
@@ -4569,7 +4569,7 @@ void TestLevel(void)
 	strcpy(DateiHeader.ParallaxBFile,  BackgroundNames.ParallaxBFile);
 	strcpy(DateiHeader.CloudFile,	   BackgroundNames.CloudFile);
 
-	for(i=0; i<NumUsedSets; i++)
+	for(int i=0; i<NumUsedSets; i++)
 	{
 		SendMessage(ComboBoxSelectTileset, CB_GETLBTEXT, TilesetNummer[i], (LPARAM) StringBuffer);
 		strcpy(DateiHeader.SetNames[i], StringBuffer);
@@ -4579,7 +4579,7 @@ void TestLevel(void)
 	fwrite(&DateiHeader, sizeof(DateiHeader), 1, Datei);
 
 	// LevelDaten sichern		 
-	 for(i=0; i<LevelSizeX; i++)
+	 for(int i=0; i<LevelSizeX; i++)
 	  for(int j=0; j<LevelSizeY; j++)
 		 fwrite(&pTileEngine->Tiles[i][j], sizeof(pTileEngine->Tiles[i][j]), 1, Datei);
 
@@ -4804,7 +4804,7 @@ bool GameInit(HINSTANCE hinstance)
 	ObjectGFX[102].LoadFromGfx("riesenraupe.bmp",   540, 290, 180,  58, 3,5);
 	ObjectGFX[103].LoadFromGfx("wasp.png",		  232, 300, 116, 100, 2,3);
 
-	for (i=104; i<119; i++)
+	for (int i=104; i<119; i++)
 		ObjectGFX[i].LoadImage("gfx/nix.bmp",		 32,  32,  32,  32, 1,1);
 
 	// Zwischen und Endgegner (120 - 140)
@@ -4928,13 +4928,13 @@ bool GameExit(void)
 	for(int i=0; i<10; i++)
 		DeleteObject(BlockBrush[i]);
 
-	for(i=0; i<3; i++)
+	for(int i=0; i<3; i++)
 		DeleteObject(Pens[i]);
 
 	// Tileengine beenden
 	delete(pTileEngine);
 
-	for(i=0; i<100; i++)
+	for(int i=0; i<100; i++)
 		ObjectGFX[i].~DirectGraphicsSprite();
 
 	DirectGraphics.Exit();				// Direct3D    beenden

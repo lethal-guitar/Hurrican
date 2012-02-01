@@ -51,7 +51,7 @@ DirectSoundClass::DirectSoundClass(void)
 	ChannelsUsed = 0;
 
 	// Songs auf NULL setzen
-	for(i=0; i<MAX_SONGS; i++)
+	for(int i=0; i<MAX_SONGS; i++)
 		Songs[i] = NULL;
 }
 
@@ -125,7 +125,7 @@ void DirectSoundClass::Exit(void)
 	// FMOD aufräumen
 	FMUSIC_StopAllSongs();
 
-	for(i=0; i<MAX_SONGS; i++)
+	for(int i=0; i<MAX_SONGS; i++)
 		FMUSIC_FreeSong(Songs[i]);
 
 	FSOUND_Close();										

@@ -16,9 +16,9 @@
 // Include Dateien
 // --------------------------------------------------------------------------------------
 
-#include <d3d8.h>
-#include <d3dx8.h>
-#include <d3dx8tex.h>
+#include <d3d9.h>
+#include <d3dx9.h>
+//#include <d3dx8tex.h>
 
 // --------------------------------------------------------------------------------------
 // Defines
@@ -50,7 +50,7 @@ RECT GetClippingArea(void);										// Aktuelle Clipping Area abfragen
 class DirectGraphicsSurface
 {
 	private:
-		LPDIRECT3DSURFACE8	itsSurface;							// Surface mit Grafikdaten
+		LPDIRECT3DSURFACE9	itsSurface;							// Surface mit Grafikdaten
 		RECT				itsRect;							// zu zeigender Ausschnitt
 
 	public:
@@ -61,7 +61,7 @@ class DirectGraphicsSurface
 		bool  SetRect	  (int left,  int top, 
 						   int right, int bottom);				// Neuen Ausschnitt setzen
 		RECT  GetRect	  (void);								// Ausschnitt holen
-		bool  DrawSurface (LPDIRECT3DSURFACE8 &Temp,			// Bild auf Surface Temp anzeigen
+		bool  DrawSurface (LPDIRECT3DSURFACE9 &Temp,			// Bild auf Surface Temp anzeigen
 						   int xPos, int yPos);					// an Position xPos/yPos
 };
 
@@ -77,7 +77,7 @@ class DirectGraphicsSprite
 		RECT				itsRect;							// zu zeigender Ausschnitt
 		
 	public:
-		LPDIRECT3DTEXTURE8	itsTexture;							// Textur mit Grafikdaten
+		LPDIRECT3DTEXTURE9	itsTexture;							// Textur mit Grafikdaten
 		float				itsXSize;							// x-Grösse der Textur
 		float				itsYSize;							// y-Grösse der Textur
 		int					itsXFrameSize;						// Framegrösse in X-Richtung

@@ -25,8 +25,8 @@
 // --------------------------------------------------------------------------------------
 
 extern Logdatei				Protokoll;					// Protokoll Datei
-extern LPDIRECT3DDEVICE8	lpD3DDevice;				// Direct3D Device-Objekt
-extern LPDIRECT3DSURFACE8	lpBackbuffer;				// Der Backbuffer
+extern LPDIRECT3DDEVICE9	lpD3DDevice;				// Direct3D Device-Objekt
+//extern LPDIRECT3DSURFACE9	lpBackbuffer;				// Der Backbuffer
 
 // --------------------------------------------------------------------------------------
 // sonstige Variablen
@@ -84,7 +84,7 @@ bool DirectGraphicsClass::Init(HWND hwnd, DWORD dwBreite, DWORD dwHoehe,
 
 	ZeroMemory(&PresentParams,sizeof(PresentParams));
 
-	lpD3D = Direct3DCreate8(D3D_SDK_VERSION);	
+	lpD3D = Direct3DCreate9(D3D_SDK_VERSION);	
 
 	Res = lpD3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &DisplayMode);
 
@@ -97,16 +97,17 @@ bool DirectGraphicsClass::Init(HWND hwnd, DWORD dwBreite, DWORD dwHoehe,
 	PresentParams.BackBufferHeight					= SCREENHEIGHT;					// Screenhöhe
 	PresentParams.BackBufferFormat					= D3DFMT_X8R8G8B8;				
 
-	if(VSync == true)	PresentParams.SwapEffect	= D3DSWAPEFFECT_COPY_VSYNC;		// VSync an	
-				else	PresentParams.SwapEffect	= D3DSWAPEFFECT_DISCARD;		// VSync aus
+	//if(VSync == true)	PresentParams.SwapEffect	= D3DSWAPEFFECT_COPY_VSYNC;		// VSync an	
+	//			else
+	PresentParams.SwapEffect	= D3DSWAPEFFECT_DISCARD;		// VSync aus
 
 	if(RUNWINDOWMODE == false)
 	{
 		PresentParams.FullScreen_RefreshRateInHz		= D3DPRESENT_RATE_DEFAULT;		// Refresh Rate
 		if(VSync == true)														// VSYNC anlassen
-			PresentParams.FullScreen_PresentationInterval	= D3DPRESENT_INTERVAL_ONE;		
+			PresentParams.PresentationInterval	= D3DPRESENT_INTERVAL_ONE;		
 		else																	// VSYNC auslassen
-			PresentParams.FullScreen_PresentationInterval	= D3DPRESENT_INTERVAL_IMMEDIATE;		
+			PresentParams.PresentationInterval	= D3DPRESENT_INTERVAL_IMMEDIATE;		
 	}
 
 	PresentParams.Flags								= D3DPRESENTFLAG_LOCKABLE_BACKBUFFER;	// Backbuffer 
@@ -177,7 +178,7 @@ _ModeFound:
 	// Rausfinden, wie ich die Texturen laden muss (nur rechteckig, 2er Potenz)
 
 	// Device kann nur quadratische Texturen
-	D3DCAPS8 d3dCaps;
+	D3DCAPS9 d3dCaps;
 
 	lpD3DDevice->GetDeviceCaps(&d3dCaps);
 	
@@ -193,7 +194,7 @@ _ModeFound:
 		PowerOfTwo = false;
 
    // Globale Variable mit dem tatsächlichen BackBuffer füllen
-   lpD3DDevice->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &lpBackbuffer);
+   //lpD3DDevice->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &lpBackbuffer);
 
    // Licht, Cullmodus und Z-Buffer aktivieren
    lpD3DDevice->SetRenderState(D3DRS_AMBIENT,D3DCOLOR_XRGB(255,255,255));
@@ -214,7 +215,7 @@ _ModeFound:
 	}
 
 	// Flexible Vertex Format setzen
-	hr = lpD3DDevice->SetVertexShader (D3DFVF_TLVERTEX);		
+	hr = lpD3DDevice->SetFVF (D3DFVF_TLVERTEX);		
 	if(hr != D3D_OK)
 	{
 		Protokoll.WriteText("\n-> SetVertexShader error!\n", true);
@@ -239,7 +240,7 @@ _ModeFound:
 
 bool DirectGraphicsClass::Exit(void)
 {
-	SafeRelease(lpBackbuffer);
+	//SafeRelease(lpBackbuffer);
 	SafeRelease(lpD3DDevice);
 	SafeRelease(lpD3D);
 	Protokoll.WriteText("-> Direct3D erfolgreich beendet !\n", false);
@@ -253,9 +254,10 @@ bool DirectGraphicsClass::Exit(void)
 
 bool DirectGraphicsClass::TakeScreenshot(char Filename[100])
 {
+	/*
 	FILE *f = NULL;
 
-	LPDIRECT3DSURFACE8	lpSurface	= NULL;			// Surface, in die wir den FrontBuffer kopieren
+	LPDIRECT3DSURFACE9	lpSurface	= NULL;			// Surface, in die wir den FrontBuffer kopieren
 	LPBYTE				Bits		= NULL;			// Array mit Pixeldaten zur Konvertierung
 	D3DLOCKED_RECT		LockedRect;					// Rect mit den Surface Infos
 
@@ -373,7 +375,7 @@ bool DirectGraphicsClass::TakeScreenshot(char Filename[100])
 	strcat(Meldung, TempName);
 	strcat(Meldung,"' wurde gemacht !\n");
 	Protokoll.WriteText(Meldung, false);
-	
+	*/
 	return true;
 }
 
@@ -381,7 +383,7 @@ bool DirectGraphicsClass::TakeScreenshot(char Filename[100])
 // Pixel an x/y mit Farbe "rot gruen blau" setzen
 // --------------------------------------------------------------------------------------
 
-bool DirectGraphicsClass::PutPixel(int x, int y, UCHAR rot,UCHAR gruen, UCHAR blau, LPDIRECT3DSURFACE8 lpDDSurf)
+bool DirectGraphicsClass::PutPixel(int x, int y, UCHAR rot,UCHAR gruen, UCHAR blau, LPDIRECT3DSURFACE9 lpDDSurf)
 {
 	int Zeilenbreite;			// Zeilenbreite
 	int DDS_Breite;				// Breite der Surface

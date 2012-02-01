@@ -13,7 +13,7 @@
 // Includes
 // --------------------------------------------------------------------------------------
 
-#include <d3dx8.h>
+#include <d3dx9.h>
 #include "DX8Graphics.h"
 #include "DX8Sprite.h"
 

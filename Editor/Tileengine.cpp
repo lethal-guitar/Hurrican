@@ -22,7 +22,7 @@
 // externe Variablen
 // --------------------------------------------------------------------------------------
 
-extern LPDIRECT3DDEVICE8	lpD3DDevice;				// Direct3D Device-Objekt
+extern LPDIRECT3DDEVICE9	lpD3DDevice;				// Direct3D Device-Objekt
 extern Logdatei				Protokoll;
 extern DirectGraphicsClass  DirectGraphics;
 extern bool					bCopyLight;
@@ -69,7 +69,7 @@ TileEngineClass::TileEngineClass(void)
 		 Tiles[i][j].Alpha		  = 255;
 	 }
 
-	 for(i=0; i<MAX_TILESETS; i++)
+	 for(int i=0; i<MAX_TILESETS; i++)
 		 TileGfx[i].itsTexture = NULL;
 }
 

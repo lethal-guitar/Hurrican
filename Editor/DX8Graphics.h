@@ -17,8 +17,8 @@
 // Include Dateien
 // --------------------------------------------------------------------------------------
 
-#include <d3d8.h>
-#include <d3dx8.h>
+#include <d3d9.h>
+#include <d3dx9.h>
 
 // --------------------------------------------------------------------------------------
 // Defines
@@ -53,7 +53,7 @@ class DirectGraphicsClass
 {
 	private:
 		bool					useVSync;						// VSync ein/aus ?
-		LPDIRECT3D8				lpD3D;							// Direct3D Hauptobjekt
+		LPDIRECT3D9				lpD3D;							// Direct3D Hauptobjekt
 		D3DDISPLAYMODE			d3ddm;							// Display Mode
 		D3DPRESENT_PARAMETERS	d3dpp;							// Aktuelle Einstellungen
 		
@@ -70,7 +70,7 @@ class DirectGraphicsClass
 
 		bool TakeScreenshot(char Filename[100]);				// Screenshot machen
 		bool PutPixel(int x, int y, UCHAR rot,UCHAR gruen,		// Pixel setzen	
-					  UCHAR blau, LPDIRECT3DSURFACE8 lpDDSurf);
+					  UCHAR blau, LPDIRECT3DSURFACE9 lpDDSurf);
 		void SetColorKeyMode(void);								// Alpha für Colorkey oder
 		void SetAdditiveMode(void);								// Additive-Blending nutzen
 };

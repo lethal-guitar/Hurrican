@@ -83,7 +83,7 @@ DirectInputClass::DirectInputClass(void)
 	Joystick	 = false;
 	JoystickX	 = 0;
 	JoystickY	 = 0;
-	for(i=0; i<MAX_JOYSTICKBUTTONS; i++)
+	for(int i=0; i<MAX_JOYSTICKBUTTONS; i++)
 		JoystickButtons[i] = false;
 }
 
