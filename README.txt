@@ -1,3 +1,7 @@
+To compile install Visual Studio 2010 and the DirectX SDK from June 2010 (the last one ever). Then press play on tape, everything else is included.
+
+Original readme by Eiswuxe:
+
 Hi guys,
 
 I decided to release the sourcecode for Hurrican and its level editor to the public today, along with all the assets that the game contains.
