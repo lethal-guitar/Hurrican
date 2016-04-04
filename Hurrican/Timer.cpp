@@ -27,34 +27,17 @@
 // Konstruktor, prüft auf den PerformanceCounter und setzt diverse Werte auf den Startwert
 // --------------------------------------------------------------------------------------
 
-TimerClass::TimerClass(void)
+TimerClass::TimerClass()
+	: framesElapsed(0)
+	, lastTime(clock.now())
+	, SpeedFaktor(1.0f)
 {
-   aktuelleZeit				= 0;							// Aktuelle Zeit auf 0 setzen
-   letzterFrame				= 0;							// die des letzten Frames auch
    maxFPS					= 0;							// best mögliche Peformance fordern
    vergangeneZeit			= 1.0f;
-   vergangeneFrames			= 0;							// Gesamtzahl der Frames
    FPSMinimum				= 10000.0f;						// kleinste Framerate setzen
    FPSMaximum				= 0.0f;							// grösste Framerate setzen
    DurchschnittFramerate	= 0;							// durchscnittliche Framerate
    MoveSpeed				= 10.0f;						// so moven wie bei 60 fps
-   SpeedFaktor				= 1.0f;
-
-   // testen, ob ein PerformanceCounter exisitert
-   if(QueryPerformanceFrequency((LARGE_INTEGER *) &Frequenz))
-   { 
-	   PerformanceCounter=true;
-	   QueryPerformanceCounter((LARGE_INTEGER *) &letzterFrame); 
-	   ZeitFaktor=1.0f/Frequenz;
-	   //Protokoll.WriteValue(Frequenz);
-   }
-   // wenn nicht, dann timeGetTime verwenden
-   else
-   { 
-     PerformanceCounter=false;
-	 letzterFrame=timeGetTime();
-	 ZeitFaktor=0.001f;
-   } 
 }
 
 // --------------------------------------------------------------------------------------
@@ -71,24 +54,23 @@ TimerClass::~TimerClass(void)
 
 void  TimerClass::update(void)
 {
-	vergangeneFrames++;												// für die Schnittberechnung
-    if(PerformanceCounter)											// Counter vorhanden ?
-        QueryPerformanceCounter((LARGE_INTEGER *) &aktuelleZeit);   // dann beutzen
-    else															// wenn nicht, dann benutzen
-	aktuelleZeit=timeGetTime();										// wir timeGetTime
+	using namespace std::chrono;
+	++framesElapsed;
+	const auto currentTime = clock.now();
+	const duration<double> elapsedTime = currentTime - lastTime;
 
-    vergangeneZeit=(aktuelleZeit-letzterFrame)*ZeitFaktor;			// vergangene Zeit neu setzen
-    letzterFrame=aktuelleZeit;										// letzten Frame aktualisieren
+    vergangeneZeit = elapsedTime.count(); // vergangene Zeit neu setzen
+    lastTime=currentTime;										// letzten Frame aktualisieren
 
-	aktuelleFramerate=1/vergangeneZeit;								// Framerate berechnen
+	aktuelleFramerate=1 / vergangeneZeit;								// Framerate berechnen
 	if(aktuelleFramerate>FPSMaximum)								// neue Maximale Framerate ?
 		FPSMaximum = aktuelleFramerate;
 	if(aktuelleFramerate<FPSMinimum)								// neue Minimale Framerate ?
 		FPSMinimum = aktuelleFramerate;
 
 	// Durschnitt der Framerates berechnen
-	DurchschnittFramerate = (vergangeneFrames*DurchschnittFramerate+aktuelleFramerate)
-				  		   /(vergangeneFrames+1);
+	DurchschnittFramerate = (framesElapsed*DurchschnittFramerate+aktuelleFramerate)
+				  		   /(framesElapsed+1);
 
 	// Speedfaktor errechnen
 	SpeedFaktor = (float)(MoveSpeed * vergangeneZeit);
@@ -102,36 +84,30 @@ void  TimerClass::update(void)
 // Warten bis die maximal gesetzte Framerate erreicht ist
 // --------------------------------------------------------------------------------------
 
-void  TimerClass::wait(void)
+void  TimerClass::wait()
 {
-	if(maxFPS==0)							// bei Framerate = 0 gleich wieder zurück
+	using namespace std::chrono;
+
+	if (maxFPS==0)							// bei Framerate = 0 gleich wieder zurück
 		return;								// da wir da nichts abwarten müssen :-)
 
-	// Diese Schleife wird solange durchlaufen, bis die gewünschte Framerate erreicht ist
+	int currentFps = 0;
 	do
-	{	// Zeit holen
-		if(PerformanceCounter)				// mit PerformanceCounter
-			QueryPerformanceCounter((LARGE_INTEGER *) &aktuelleZeit); 
-		else								// oder timeGetTime, je nach dem
-			aktuelleZeit=timeGetTime(); 
+	{
+	    duration<double> elapsedSeconds = clock.now() - lastTime;
+		currentFps = static_cast<int>(1.0 / elapsedSeconds.count());
 	}
-	while(maxFPS<(int)1/((aktuelleZeit-letzterFrame)*ZeitFaktor));
+	while (currentFps >= maxFPS);
 }
 
 // --------------------------------------------------------------------------------------
 // Wartetet "Wert" Milli-Sekunden
 // --------------------------------------------------------------------------------------
 
-void  TimerClass::wait(int Wert)
+void  TimerClass::wait(int howLong)
 {
-	do
-	{	// Zeit holen
-		if(PerformanceCounter)						// mit PerformanceCounter
-			QueryPerformanceCounter((LARGE_INTEGER *) &aktuelleZeit); 
-		else										// oder timeGetTime, je nach dem
-			aktuelleZeit=timeGetTime(); 
-	}
-	while(Wert>(aktuelleZeit-letzterFrame)*ZeitFaktor*1000);
+	using namespace std::chrono;
+	while(duration_cast<milliseconds>(clock.now() - lastTime).count() <= howLong);
 }
 
 // --------------------------------------------------------------------------------------

@@ -25,6 +25,8 @@
 // --------------------------------------------------------------------------------------
 
 #include <windows.h>
+#include <chrono>
+#include <cstdint>
 
 // --------------------------------------------------------------------------------------
 // Defines
@@ -37,13 +39,14 @@
 class TimerClass
 {
 	private:
-		bool		PerformanceCounter;    	// Performance Counter vorhanden ?
-		LONGLONG	vergangeneFrames;		// Vergangene Frames seit Beginn (für Schnitt)
-		LONGLONG	aktuelleZeit;			// die aktuelle Zeit
-		LONGLONG	Frequenz;				// Performance Timer Frequenz
+		using TClock = std::chrono::high_resolution_clock;
+		using TTimePoint = TClock::time_point;
+		TClock clock;
+		std::uint64_t framesElapsed;
+		TTimePoint lastTime;
+
 		LONGLONG	letzterFrame;			// Zeit des vorherigen Frames
 		float		MoveSpeed;				// Wird durch die aktuelle Framerate geteilt
-		double		ZeitFaktor;				// Skalierungsfaktor
 		double		DurchschnittFramerate;	// Durchschnittliche Framerate
 		double		FPSMinimum;				// kleinste gemessene Framerate
 		double		FPSMaximum;				// grösste  gemessene Framerate
