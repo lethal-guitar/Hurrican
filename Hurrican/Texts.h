@@ -35,7 +35,7 @@
 // es wird nie konkret ein String im Code angegeben, sondern immer nur eine Zahl, welche
 // einen Array-Eintrag im Text Array angibt.
 
-typedef enum Textenum
+enum Textenum
 {
 	// Header des Language Files
 	TEXT_HEADER,
