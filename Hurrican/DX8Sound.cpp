@@ -37,10 +37,10 @@
 
 char *GetFMODErrorString(int ErrorNr)
 {
-	char ErrorString[100];
-	char *ReturnString;
+	//char ErrorString[100];
+	//char *ReturnString;
 
-	strcpy_s(ErrorString, strlen("Unknown Error") + 1, "Unknown Error");
+	//strcpy_s(ErrorString, strlen("Unknown Error") + 1, "Unknown Error");
 
 	/*switch(ErrorNr)
 	{
@@ -66,9 +66,9 @@ char *GetFMODErrorString(int ErrorNr)
 		default							: strcpy_s(ErrorString, "Unknown Error"); break;
 	} // switch(ErrorNr)*/
 
-	ReturnString = ErrorString;
+	//ReturnString = ErrorString;
 
-	return ReturnString;
+	return "Unknown Error";
 } // GetFMODErrorString
 
 //---------------------------------------------------------------------------------------
